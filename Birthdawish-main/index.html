@@ -1,0 +1,2547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎉</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe5f1 30%, #ffd6e8 60%, #ffeef8 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 20s ease infinite;
+            color: #8b4a6b;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            25% {
+                background-position: 100% 0%;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+
+            75% {
+                background-position: 0% 100%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Animated background overlay */
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+            opacity: 0.5;
+        }
+
+        /* Shimmer effect */
+        .shimmer {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                    transparent 30%,
+                    rgba(255, 255, 255, 0.1) 50%,
+                    transparent 70%);
+            animation: shimmerMove 8s infinite;
+        }
+
+        @keyframes shimmerMove {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 182, 193, 0.3) 0%, transparent 70%);
+            animation: floatCircle 20s infinite ease-in-out;
+        }
+
+        .bg-circle:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .bg-circle:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 3s;
+        }
+
+        .bg-circle:nth-child(3) {
+            width: 250px;
+            height: 250px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 6s;
+        }
+
+        .bg-circle:nth-child(4) {
+            width: 350px;
+            height: 350px;
+            top: 30%;
+            right: 30%;
+            animation-delay: 9s;
+        }
+
+        .bg-circle:nth-child(5) {
+            width: 200px;
+            height: 200px;
+            bottom: 40%;
+            right: 10%;
+            animation-delay: 12s;
+        }
+
+        @keyframes floatCircle {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.3;
+            }
+
+            25% {
+                transform: translate(50px, -50px) scale(1.1);
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: translate(-30px, 30px) scale(0.9);
+                opacity: 0.25;
+            }
+
+            75% {
+                transform: translate(30px, 50px) scale(1.05);
+                opacity: 0.35;
+            }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 182, 193, 0.6);
+            border-radius: 50%;
+            animation: floatParticle 15s infinite ease-in-out;
+        }
+
+        .particle:nth-child(6) {
+            left: 20%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .particle:nth-child(7) {
+            left: 50%;
+            top: 40%;
+            animation-delay: 2s;
+        }
+
+        .particle:nth-child(8) {
+            left: 80%;
+            top: 60%;
+            animation-delay: 4s;
+        }
+
+        .particle:nth-child(9) {
+            left: 30%;
+            top: 80%;
+            animation-delay: 6s;
+        }
+
+        .particle:nth-child(10) {
+            left: 70%;
+            top: 10%;
+            animation-delay: 8s;
+        }
+
+        .particle:nth-child(11) {
+            left: 10%;
+            top: 50%;
+            animation-delay: 10s;
+        }
+
+        .particle:nth-child(12) {
+            left: 90%;
+            top: 30%;
+            animation-delay: 12s;
+        }
+
+        @keyframes floatParticle {
+
+            0%,
+            100% {
+                transform: translateY(0) translateX(0);
+                opacity: 0.6;
+            }
+
+            25% {
+                transform: translateY(-100px) translateX(50px);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: translateY(-50px) translateX(-30px);
+                opacity: 0.4;
+            }
+
+            75% {
+                transform: translateY(-150px) translateX(20px);
+                opacity: 0.7;
+            }
+        }
+
+        /* Background decorations */
+        .background-decoration {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .flower {
+            position: absolute;
+            opacity: 0.3;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .flower:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            font-size: 40px;
+            animation-delay: 0s;
+        }
+
+        .flower:nth-child(2) {
+            top: 30%;
+            right: 10%;
+            font-size: 35px;
+            animation-delay: 2s;
+        }
+
+        .flower:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            font-size: 45px;
+            animation-delay: 4s;
+        }
+
+        .flower:nth-child(4) {
+            top: 60%;
+            right: 5%;
+            font-size: 30px;
+            animation-delay: 6s;
+        }
+
+        .balloon {
+            position: absolute;
+            opacity: 0.25;
+            animation: floatUp 20s infinite ease-in-out;
+        }
+
+        .balloon:nth-child(5) {
+            top: 15%;
+            left: 20%;
+            font-size: 50px;
+            animation-delay: 1s;
+        }
+
+        .balloon:nth-child(6) {
+            top: 50%;
+            right: 20%;
+            font-size: 45px;
+            animation-delay: 3s;
+        }
+
+        .balloon:nth-child(7) {
+            bottom: 30%;
+            left: 8%;
+            font-size: 40px;
+            animation-delay: 5s;
+        }
+
+        .balloon:nth-child(8) {
+            top: 70%;
+            right: 8%;
+            font-size: 35px;
+            animation-delay: 7s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        @keyframes floatUp {
+
+            0%,
+            100% {
+                transform: translateY(0px) translateX(0px);
+            }
+
+            50% {
+                transform: translateY(-30px) translateX(10px);
+            }
+        }
+
+        /* Main content */
+        .container {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            padding-top: 6rem;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 300;
+            color: #d63384;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+            text-shadow: 2px 2px 4px rgba(214, 51, 132, 0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 2rem;
+            color: #c44569;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.8s forwards;
+            font-weight: 300;
+        }
+
+        .hero .birthday-message {
+            font-size: 1.5rem;
+            color: #a0526d;
+            max-width: 600px;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.1s forwards;
+        }
+
+        .hero .birthday-message .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease-out;
+        }
+
+        .hero .birthday-message .word.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .sparkle {
+            display: inline-block;
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes sparkle {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Navigation Button */
+        .nav-button {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #d63384, #ff69b4);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 300;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 2s forwards;
+            box-shadow: 0 5px 20px rgba(214, 51, 132, 0.3);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .nav-button:hover {
+            transform: translateX(-50%) scale(1.05);
+            box-shadow: 0 8px 30px rgba(214, 51, 132, 0.4);
+        }
+
+        .nav-button:active {
+            transform: translateX(-50%) scale(0.98);
+        }
+
+        .back-button {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            padding: 0.8rem 1.5rem;
+            background: rgba(214, 51, 132, 0.9);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            z-index: 100;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(214, 51, 132, 0.3);
+        }
+
+        .back-button.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .back-button:hover {
+            background: rgba(214, 51, 132, 1);
+            transform: translateX(0) scale(1.05);
+        }
+
+        /* Header Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 238, 248, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(214, 51, 132, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: #d63384;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 300;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            background: rgba(214, 51, 132, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            background: linear-gradient(135deg, #d63384, #ff69b4);
+            color: white;
+            box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+        }
+
+        /* Password Modal */
+        .password-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 238, 248, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .password-modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .password-modal-content {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(214, 51, 132, 0.3);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .password-modal.show .password-modal-content {
+            transform: scale(1);
+        }
+
+        .password-modal h2 {
+            color: #d63384;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .password-modal p {
+            color: #a0526d;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(214, 51, 132, 0.3);
+            border-radius: 15px;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            color: #8b4a6b;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .password-input:focus {
+            outline: none;
+            border-color: #d63384;
+            box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.1);
+        }
+
+        .password-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .password-btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 300;
+        }
+
+        .password-btn.submit {
+            background: linear-gradient(135deg, #d63384, #ff69b4);
+            color: white;
+            box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+        }
+
+        .password-btn.submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(214, 51, 132, 0.4);
+        }
+
+        .password-btn.cancel {
+            background: rgba(139, 74, 107, 0.2);
+            color: #8b4a6b;
+        }
+
+        .password-btn.cancel:hover {
+            background: rgba(139, 74, 107, 0.3);
+        }
+
+        .password-error {
+            color: #d63384;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            min-height: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .password-error.show {
+            opacity: 1;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-10px);
+            }
+
+            75% {
+                transform: translateX(10px);
+            }
+        }
+
+        /* Music Control Button */
+        .music-control {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 182, 193, 0.4);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(214, 51, 132, 0.3);
+            color: rgba(214, 51, 132, 0.8);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 15px rgba(214, 51, 132, 0.15);
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1s forwards;
+        }
+
+        .music-control:hover {
+            background: rgba(255, 182, 193, 0.6);
+            border-color: rgba(214, 51, 132, 0.5);
+            color: rgba(214, 51, 132, 1);
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(214, 51, 132, 0.25);
+        }
+
+        .music-control.muted {
+            background: rgba(255, 182, 193, 0.3);
+            border-color: rgba(139, 74, 107, 0.2);
+            color: rgba(139, 74, 107, 0.6);
+        }
+
+        .music-control.muted:hover {
+            background: rgba(255, 182, 193, 0.5);
+            border-color: rgba(139, 74, 107, 0.4);
+            color: rgba(139, 74, 107, 0.8);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 3px 15px rgba(214, 51, 132, 0.15);
+            }
+
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 5px 25px rgba(214, 51, 132, 0.25);
+            }
+        }
+
+        .music-control.playing {
+            animation: pulse 2s ease-in-out infinite;
+            background: rgba(255, 182, 193, 0.5);
+        }
+
+        .scroll-indicator .mouse {
+            width: 30px;
+            height: 50px;
+            border: 2px solid #d63384;
+            border-radius: 20px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .scroll-indicator .mouse::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #d63384;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scroll 2s infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        /* Page Container */
+        .page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.6s ease;
+            z-index: 1;
+        }
+
+        .page.active {
+            z-index: 2;
+        }
+
+        .page.hidden {
+            transform: translateX(100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .page.active {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* Photo Gallery Section */
+        .gallery-section {
+            min-height: 100vh;
+            padding: 6rem 2rem 4rem;
+            position: relative;
+        }
+
+        .gallery-title {
+            font-size: 3rem;
+            color: #d63384;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .gallery-title.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-auto-rows: 250px;
+            grid-auto-flow: dense;
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            opacity: 0;
+            transform: scale(0.8) translateY(50px);
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 10px 30px rgba(214, 51, 132, 0.2);
+            cursor: pointer;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+        }
+
+        .gallery-item.wide {
+            grid-column: span 2;
+        }
+
+        .gallery-item.large {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+
+        .gallery-item.visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(214, 51, 132, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ffe5f1 0%, #ffd6e8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d63384;
+            font-size: 3rem;
+            border: 3px dashed #ffb3d9;
+        }
+
+        /* Page Content Sections */
+        .page-content {
+            min-height: 100vh;
+            padding: 6rem 2rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .page-content h2,
+        .page-title {
+            font-size: 3rem;
+            color: #d63384;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .page-content h2.visible,
+        .page-title.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .page-content p {
+            font-size: 1.3rem;
+            color: #a0526d;
+            max-width: 800px;
+            line-height: 2;
+            margin-bottom: 2rem;
+        }
+
+        /* Messages Section */
+        .messages-container {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+            align-items: start;
+        }
+
+        .message-video-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(214, 51, 132, 0.2);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .message-video-card.landscape {
+            aspect-ratio: 16/9;
+            grid-column: span 1;
+        }
+
+        .message-video-card.portrait {
+            aspect-ratio: 9/16;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* On larger screens, let landscape span more if appropriate, or just keep it balanced */
+        @media (min-width: 992px) {
+            .messages-container {
+                grid-template-columns: repeat(3, 1fr);
+                /* Ensure 3 columns for portraits */
+            }
+
+            .message-video-card.landscape {
+                grid-column: 1 / -1;
+                /* Make landscape prominent on top */
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        }
+
+        .message-video-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .message-video-card video {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(214, 51, 132, 0.1);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ffe5f1 0%, #ffd6e8 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #d63384;
+            border: 2px dashed #ffb3d9;
+        }
+
+        .video-placeholder span {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .messages-container {
+                grid-template-columns: 1fr;
+            }
+
+            .message-video-card.landscape,
+            .message-video-card.portrait {
+                aspect-ratio: auto;
+                min-height: 400px;
+                width: 100%;
+            }
+
+            .message-video-card.portrait {
+                aspect-ratio: 9/16;
+            }
+
+            .message-video-card.landscape {
+                aspect-ratio: 16/9;
+            }
+        }
+
+        /* Our Page Section */
+        .our-page-content {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .timeline-item {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(214, 51, 132, 0.15);
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s ease-out;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .timeline-item h3 {
+            color: #d63384;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        /* Responsive gallery */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .gallery-title {
+                font-size: 2rem;
+            }
+
+            .nav-menu {
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-link {
+                font-size: 0.9rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .header {
+                padding: 1rem;
+            }
+
+            .music-control {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Post-Unlock Message Overlay */
+        .unlock-message-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 223, 186, 0.95) 0%, rgba(255, 182, 193, 0.95) 100%);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .unlock-message-overlay.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .unlock-message-content {
+            max-width: 800px;
+            padding: 3rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border-radius: 40px;
+            box-shadow: 0 20px 60px rgba(214, 51, 132, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transform: scale(0.9);
+            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .unlock-message-overlay.show .unlock-message-content {
+            transform: scale(1);
+        }
+
+        .unlock-message-text {
+            font-size: 2rem;
+            color: #d63384;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            min-height: 100px;
+        }
+
+        .unlock-continue-btn {
+            background: linear-gradient(45deg, #d63384, #ff80ab);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(214, 51, 132, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .unlock-continue-btn.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .unlock-continue-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(214, 51, 132, 0.4);
+        }
+
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1.2em;
+            background-color: #d63384;
+            margin-left: 5px;
+            animation: blink 0.7s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .unlock-message-text {
+                font-size: 1.5rem;
+            }
+
+            .unlock-message-content {
+                padding: 2rem;
+                margin: 1rem;
+            }
+        }
+
+
+        /* Our Page - Magazine Layout */
+        .magazine-container {
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(214, 51, 132, 0.1);
+        }
+
+        .mag-hero {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mag-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.8);
+        }
+
+        .mag-hero-title {
+            position: absolute;
+            font-size: 5rem;
+            color: white;
+            font-weight: 300;
+            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .mag-row {
+            display: flex;
+            gap: 4rem;
+            margin-bottom: 6rem;
+            align-items: center;
+        }
+
+        .mag-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .mag-text-block {
+            flex: 1;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .mag-text-block.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mag-text-block h3 {
+            font-size: 2.5rem;
+            color: #d63384;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            border-bottom: 1px solid rgba(214, 51, 132, 0.2);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .mag-text-block p {
+            font-size: 1.15rem;
+            color: #8b4a6b;
+            line-height: 2;
+            text-align: justify;
+        }
+
+        .mag-text-block p::first-letter {
+            font-size: 3.5rem;
+            float: left;
+            padding: 0.5rem 0.5rem 0 0;
+            line-height: 1;
+            color: #d63384;
+            font-weight: bold;
+        }
+
+        .mag-image-block {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(214, 51, 132, 0.2);
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .mag-image-block.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .mag-image-block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .mag-image-block:hover img {
+            transform: scale(1.05);
+        }
+
+        .mag-quote {
+            width: 100%;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            border-top: 2px solid rgba(214, 51, 132, 0.1);
+            border-bottom: 2px solid rgba(214, 51, 132, 0.1);
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 1s ease-out;
+        }
+
+        .mag-quote.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .mag-quote q {
+            font-size: 2.5rem;
+            color: #d63384;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        .mag-quote cite {
+            display: block;
+            margin-top: 1.5rem;
+            color: #d63384;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Handwritten Note Section */
+        .note-section {
+            margin-top: 8rem;
+            padding: 4rem;
+            background: #fffdf9;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            transform: rotate(-1deg);
+            border: 1px solid #f0e6d2;
+            opacity: 0;
+            transform: translateY(30px) rotate(-1deg);
+            transition: all 1s ease-out;
+        }
+
+        .note-section.visible {
+            opacity: 1;
+            transform: translateY(0) rotate(-1deg);
+        }
+
+        .note-section::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .note-paper {
+            font-family: 'Dancing Script', cursive;
+            /* Assuming it might be available or fallback to cursive */
+            font-size: 1.8rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+        }
+
+        .note-signature {
+            margin-top: 3rem;
+            text-align: right;
+            font-size: 2.2rem;
+            color: #d63384;
+        }
+
+        /* More photo blocks */
+        .mag-photo-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 4rem 0;
+        }
+
+        .mag-photo-strip .mag-image-block {
+            aspect-ratio: 1;
+        }
+
+        @media (max-width: 992px) {
+
+            .mag-row,
+            .mag-row.reverse {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .mag-hero-title {
+                font-size: 3rem;
+            }
+
+            .mag-text-block p::first-letter {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Responsive gallery */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .gallery-title {
+                font-size: 2rem;
+            }
+
+            .nav-menu {
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-link {
+                font-size: 0.9rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .header {
+                padding: 1rem;
+            }
+
+            .music-control {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Decorative elements */
+        .heart {
+            color: #ff69b4;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.5rem;
+            }
+
+            .hero .birthday-message {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Music for each page -->
+    <audio id="birthdayMusic" loop>
+        <source src="birthday-music.mp3" type="audio/mpeg">
+        <source src="birthday-music.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="memoriesMusic" loop>
+        <source src="memories-music.mp3" type="audio/mpeg">
+        <source src="memories-music.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio> <!-- Music Control Button -->
+    <button class="music-control" id="musicControl" onclick="toggleMute()" title="Toggle Mute">
+        <span id="musicIcon">🎵</span>
+    </button> <audio id="messagesMusic" loop>
+        <source src="messages-music.mp3" type="audio/mpeg">
+        <source src="messages-music.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="ourPageMusic" loop>
+        <source src="our-page-music.mp3" type="audio/mpeg">
+        <source src="our-page-music.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+
+    <!-- Password Modal -->
+    <div class="password-modal" id="passwordModal">
+        <div class="password-modal-content">
+            <h2>🔒 Protected Page</h2>
+            <p>This page is password protected. Please enter the password to continue.</p>
+            <input type="password" class="password-input" id="passwordInput" placeholder="Enter password..."
+                autocomplete="off">
+            <div class="password-error" id="passwordError">Incorrect password. Please try again.</div>
+            <div class="password-buttons">
+                <button class="password-btn submit" onclick="checkPassword()">Enter</button>
+                <button class="password-btn cancel" onclick="closePasswordModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="shimmer"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Background decorations -->
+    <div class="background-decoration">
+        <div class="flower">🌸</div>
+        <div class="flower">🌺</div>
+        <div class="flower">🌷</div>
+        <div class="flower">🌼</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+        <div class="balloon">🎈</div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header" id="mainHeader">
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link active" onclick="goToPage('birthday')">Birthday</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="goToPage('memories')">Memories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="goToPage('messages')">Messages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="goToPage('our-page')">Our Page</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Post-Unlock Message Overlay -->
+    <div class="unlock-message-overlay" id="unlockMessageOverlay">
+        <div class="unlock-message-content">
+            <div class="unlock-message-text" id="unlockMessageText"></div>
+            <button class="unlock-continue-btn" id="unlockContinueBtn" onclick="proceedToOurPage()">Continue to Our
+                Story</button>
+        </div>
+    </div>
+
+
+    <!-- Page 1: Birthday Page -->
+    <div class="page active" id="birthday-page">
+        <div class="container">
+            <section class="hero">
+                <h1>Happy Birthday, Swadha <span class="heart">💕</span></h1>
+                <p class="subtitle">You're the <span class="sparkle">✨</span> brightest star <span
+                        class="sparkle">✨</span>
+                </p>
+                <p class="birthday-message">
+                    Today is all about celebrating you and the amazing person you are.
+                    May your special day be filled with joy, laughter, and endless happiness! Motu
+                    Ik I am not good in making handmade cards so i made this for you. I hope you like it.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Page 2: Memories Page -->
+    <div class="page hidden" id="memories-page">
+        <section class="gallery-section">
+            <h2 class="gallery-title">Your Beautiful Memories <span class="heart">🦖</span></h2>
+            <div class="gallery-grid">
+                <!-- 50 Photo Template with Masonry Sizes -->
+                <div class="gallery-item large">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HvdqScXoIlWfSpN4PixAGZc7H0MEQhn2wFUst"
+                        alt="Memory 1"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 1</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HT09E8KOhH4eI82DUqufZTpmFr9oPxJl0GAB1"
+                        alt="Memory 2"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 2</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2H9t3Qp4Na8ia2HOnK0wVIGWck5zxvrpDbd4JQ"
+                        alt="Memory 3"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 3</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HeYvcE0t49dgjyGAHphIWuZSBkbNsfEve2D71"
+                        alt="Memory 4"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 4</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HuzVWAcZC5FiP1LtAf9RcgX8Bd6DQ27hKYZxw"
+                        alt="Memory 5"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 5</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HDmnm48s3Tgh5HEzBxRlpUFmcSJ6jiC0dayob"
+                        alt="Memory 6"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 6</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2Hu7rABr4ZC5FiP1LtAf9RcgX8Bd6DQ27hKYZx"
+                        alt="Memory 7"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 7</div>'">
+                </div>
+                <div class="gallery-item large">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HcjpVYikp5UHLyN4n8kIhXMoSQVzWftdcs2JG"
+                        alt="Memory 8"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 8</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HO8Nseav2wd3I68uh7qXAr4mtkWxVybTlsv0Q"
+                        alt="Memory 9"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 9</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HfvNPbquOEt4PQ57sHNhaGbAUJCrmepFMKSl3"
+                        alt="Memory 10"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 10</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HoM8ts5DXgxFacGUuK2Mdy6C3BZP4tSzTWnRJ"
+                        alt="Memory 11"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 11</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2Hvj14LLoIlWfSpN4PixAGZc7H0MEQhn2wFUst"
+                        alt="Memory 12"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 12</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HsewgPsEheXpR4ocW25Btd8umKyYDiqbvGIn1"
+                        alt="Memory 13"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 13</div>'">
+                </div>
+                <div class="gallery-item large">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HitqoopTw2V4JagHSI8PyZjr1E5NGKxQUW6ls"
+                        alt="Memory 14"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 14</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HcgYy6Kkp5UHLyN4n8kIhXMoSQVzWftdcs2JG"
+                        alt="Memory 15"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 15</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HkymjK9H84TlpLSRauZ0foYjhCU5zitBDNdgw"
+                        alt="Memory 16"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 16</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HWTM1q4cZxWRqDly3P45XjQpavg6O9U0ToBSr"
+                        alt="Memory 17"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 17</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2Hu1om8BZC5FiP1LtAf9RcgX8Bd6DQ27hKYZxw"
+                        alt="Memory 18"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 18</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2H7BBkMGY02dzAGjL4PCQk1pE6YW9K3BwTlvie"
+                        alt="Memory 19"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 19</div>'">
+                </div>
+                <div class="gallery-item large">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HrBdIpVFef4ERhAy9qZYvS3tlGNzc8Tbd7p1o"
+                        alt="Memory 20"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 20</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HVIA8mlPTDW2Ncr0SsPqK8XBfbFd9hCgRAYZ7"
+                        alt="Memory 21"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 21</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HPu6NFwGSf3PrNGAlsTOWRviUIX18ckH6ZSKp"
+                        alt="Memory 22"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 22</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HToc3xMdOhH4eI82DUqufZTpmFr9oPxJl0GAB"
+                        alt="Memory 23"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 23</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HsNauJWEheXpR4ocW25Btd8umKyYDiqbvGIn1"
+                        alt="Memory 24"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 24</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HJCGS2SVtB7mq6WNrscLaYIlkMpQRjDgZEGiv"
+                        alt="Memory 25"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 25</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2H5LuJuk8kQV7hxcXDCtaw02EpYUofOAzmZr9T"
+                        alt="Memory 26"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 26</div>'">
+                </div>
+                <div class="gallery-item large">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2Hi5NBw1Tw2V4JagHSI8PyZjr1E5NGKxQUW6ls"
+                        alt="Memory 27"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 27</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2Htic769KXbNDvAZcWVPx9JwRnO07MpUC6KYS3"
+                        alt="Memory 28"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 28</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HHTv3N4UnEpiSV8FxAhZt1g2jR9CQeOzPK7Ts"
+                        alt="Memory 29"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 29</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HxZuvvOrQjDFYZzb1k4hwC3WIfaP5U9qXEMR8"
+                        alt="Memory 30"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 30</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HhyCo4fL6r7HdBQRVJOgvK1q5ANicmzjEelMt"
+                        alt="Memory 31"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 31</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HI9yodtgx4jQWBgMy2Eoi9nSTtbcYOud0XCAF"
+                        alt="Memory 32"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 32</div>'">
+                </div>
+                <div class="gallery-item large">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HEDYTK3GzQTGpKq3tioYMkax9EOnWc85UHB4J"
+                        alt="Memory 33"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 33</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HegXUbPt49dgjyGAHphIWuZSBkbNsfEve2D71"
+                        alt="Memory 34"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 34</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HSZEL3WRfb82wYuV5oWRjMTmUrXl7IEPcnQka"
+                        alt="Memory 35"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 35</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HFR98z9hBskLyIXKRJHOZcSC4AM23NUWg6oem"
+                        alt="Memory 36"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 36</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HaXDLFiHemR1WAEnS2zr7UvDOCuJMQte5IfGT"
+                        alt="Memory 37"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 37</div>'">
+                </div>
+                <div class="gallery-item large">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HTobda7VOhH4eI82DUqufZTpmFr9oPxJl0GAB"
+                        alt="Memory 38"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 38</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HVFDM1fPTDW2Ncr0SsPqK8XBfbFd9hCgRAYZ7"
+                        alt="Memory 39"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 39</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2Howdr4B1DXgxFacGUuK2Mdy6C3BZP4tSzTWnR"
+                        alt="Memory 40"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 40</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HUciB5N2yXuAxbEslhUkV0Or9g8LSnapMz3Zc"
+                        alt="Memory 41"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 41</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HzZpynyixQGkg2Wf1ceYlSBswp8HVTKzyLFda"
+                        alt="Memory 42"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 42</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HOBbADIv2wd3I68uh7qXAr4mtkWxVybTlsv0Q"
+                        alt="Memory 43"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 43</div>'">
+                </div>
+                <div class="gallery-item large">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HCNwbniYhTuSlUjBaeVn1cWbY4EOZ7d9LNm3t"
+                        alt="Memory 44"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 44</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2H5rDQ7S8kQV7hxcXDCtaw02EpYUofOAzmZr9T"
+                        alt="Memory 45"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 45</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2He8mD78t49dgjyGAHphIWuZSBkbNsfEve2D71"
+                        alt="Memory 46"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 46</div>'">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2H5BDr5Z8kQV7hxcXDCtaw02EpYUofOAzmZr9T"
+                        alt="Memory 47"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 47</div>'">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HOetfPAv2wd3I68uh7qXAr4mtkWxVybTlsv0Q"
+                        alt="Memory 48"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 48</div>'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HHEo2x7UnEpiSV8FxAhZt1g2jR9CQeOzPK7Ts"
+                        alt="Memory 49"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 49</div>'">
+                </div>
+                <div class="gallery-item large">
+                    <img src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HBlk27Ixt6OK2VoFxTaEPY5LSpj7MqZHwcr8R"
+                        alt="Memory 50"
+                        onerror="this.parentElement.innerHTML='<div class=\'gallery-placeholder\'>📸 50</div>'">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Page 3: Messages Page -->
+    <div class="page hidden" id="messages-page">
+        <div class="page-content">
+            <h2 class="page-title">Messages for You <span class="heart">💌</span></h2>
+            <div class="messages-container">
+                <!-- Video 1 - Landscape -->
+                <div class="message-video-card landscape">
+                    <video controls poster="">
+                        <source src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HK6cesvCW3c9BYUS7TrlsNdtbAmCv48huLDj6"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Video 2 - Portrait -->
+                <div class="message-video-card portrait">
+                    <video controls poster="">
+                        <source src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HI1VOQ2gx4jQWBgMy2Eoi9nSTtbcYOud0XCAF"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Video 3 - Portrait -->
+                <div class="message-video-card portrait">
+                    <video controls poster="">
+                        <source src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2Hik4CaHTw2V4JagHSI8PyZjr1E5NGKxQUW6ls"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Video 4 - Portrait -->
+                <div class="message-video-card portrait">
+                    <video controls poster="">
+                        <source src="https://i43gxacz1w.ufs.sh/f/9vRWODa8ia2HeaCMczt49dgjyGAHphIWuZSBkbNsfEve2D71"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Our Page -->
+    <div class="page hidden" id="our-page-page">
+        <div class="page-content">
+            <h2 class="page-title">The Story of Us <span class="heart">💑</span></h2>
+
+            <div class="magazine-container">
+                <!-- Cover / Hero Section (Photo 1) -->
+                <div class="mag-hero">
+                    <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/1.jpg" alt="Cover Image"
+                        onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&q=80&w=1470'">
+                    <h1 class="mag-hero-title">Our Journey</h1>
+                </div>
+
+                <!-- First Row: Text Left, Image Right (Photo 2) -->
+                <div class="mag-row">
+                    <div class="mag-text-block">
+                        <h3>How It Started</h3>
+                        <p>Our story technically began on January 28th, 2003—the day the world got a lot brighter (and a
+                            lot more "Motu," haha!). But for us, the real spark happened about a year ago. We met in the
+                            most random way possible at Allegria, and from that moment on, everything became truly
+                            magical. We’ve spent so much time together since then, sharing laughs and creating our own
+                            little world, but honestly? No amount of time feels like enough. I find myself wanting to
+                            spend every possible second with you. This is the best journey I've ever been on, and I'm
+                            never letting go.</p>
+                    </div>
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/2.jpg"
+                            alt="Early Days"
+                            onerror="this.src='https://images.unsplash.com/photo-1522673607200-164883214c4f?auto=format&fit=crop&q=80&w=1170'">
+                    </div>
+                </div>
+
+                <!-- First Photo Strip (Photos 3, 4, 5) -->
+                <div class="mag-photo-strip">
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/3.jpg" alt="Photo 3">
+                    </div>
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/4.jpg" alt="Photo 4">
+                    </div>
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/5.jpg" alt="Photo 5">
+                    </div>
+                </div>
+
+                <!-- Pull Quote -->
+                <div class="mag-quote">
+                    <q>In all the world, there is no heart for me like yours. In all the world, there is no love for you
+                        like mine.</q>
+                    <cite>— Maya Angelou</cite>
+                </div>
+
+                <!-- Second Row: Image Left, Text Right (Photo 6) -->
+                <div class="mag-row reverse">
+                    <div class="mag-text-block">
+                        <h3>Unforgettable Days</h3>
+                        <p>From the long walks in the park to the quiet evenings spent just being near each other, every
+                            second has been a blessing. We've weathered storms and basked in the sunshine together. Your
+                            strength inspires me, and your kindness humbles me. I remember the way the light caught your
+                            eyes that one afternoon – a moment frozen in time that still brings a smile to my face.
+                            These are the days I live for, the moments that define who we are.</p>
+                    </div>
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/6.jpg"
+                            alt="Happy Times"
+                            onerror="this.src='https://images.unsplash.com/photo-1511733847602-c2cd7469551d?auto=format&fit=crop&q=80&w=1170'">
+                    </div>
+                </div>
+
+                <!-- Second Photo Strip (Photos 7, 8, 9) -->
+                <div class="mag-photo-strip">
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/7.jpg" alt="Photo 7">
+                    </div>
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/8.jpg" alt="Photo 8">
+                    </div>
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/9.jpg" alt="Photo 9">
+                    </div>
+                </div>
+
+                <!-- Third Photo Strip (Photos 10, 11, 12) -->
+                <div class="mag-photo-strip">
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/10.jpg"
+                            alt="Photo 10">
+                    </div>
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/11.jpg"
+                            alt="Photo 11">
+                    </div>
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/12.jpg"
+                            alt="Photo 12">
+                    </div>
+                </div>
+
+                <!-- Fourth Photo Strip (Photos 13, 14, 15) -->
+                <div class="mag-photo-strip">
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/13.jpg"
+                            alt="Photo 13">
+                    </div>
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/14.jpg"
+                            alt="Photo 14">
+                    </div>
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/15.jpg"
+                            alt="Photo 15">
+                    </div>
+                </div>
+
+                <!-- Fifth Photo Strip (Photos 16, 17, 18) -->
+                <div class="mag-photo-strip">
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/16.jpg"
+                            alt="Photo 16">
+                    </div>
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/17.jpg"
+                            alt="Photo 17">
+                    </div>
+                    <div class="mag-image-block">
+                        <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/18.jpg"
+                            alt="Photo 18">
+                    </div>
+                </div>
+
+                <!-- Final Large Photo (Photo 19) -->
+                <div class="mag-image-block" style="width: 100%; height: 500px; margin: 4rem 0;">
+                    <img src="https://cdn.jsdelivr.net/gh/ayush0f/Birthdawish/our_page_images/19.jpg" alt="Final Memory"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+
+                <!-- Final Note Section -->
+                <div class="note-section">
+                    <div class="note-paper">
+                        <p>Dear SWaaaaadha mera Motu,</p>
+
+                        <p>I, Mst Ayush Singh who is truly in love with a girl whose name is Swadha Pratosh Singh. I am
+                            writing this letter to bring to your kind notice that I am falling and falling and falling
+                            for you too too too much. Lets keep this aside but swadha I really love you and I dont wanna
+                            lose you okayyyyy??????</p>
+
+                        <p>ye sab bolne wali baat hai jo sab bolte hai but what I say is</p>
+
+                        <div style="text-align: center; margin: 3rem 0; font-weight: bold; font-style: italic;">
+                            "Are motu teri har baat meine maana hai<br>
+                            tujhe hi bahu banke ghar jo laana hai<br><br>
+                            aree meri sari bhul maaf kardenaaa<br>
+                            tere sang hi toh saath janam nibhana hai"
+                        </div>
+
+                        <p style="font-size: 1.2rem; text-align: center; opacity: 0.8; margin-bottom: 3rem;">
+                            This was written and rhymed by the GOAT Ayush Rakesh Singh
+                        </p>
+
+                        <p>yaar I want to write so much much but its too late I really hope you understand and we will
+                            update this page together and forever MUAH MUAH MUAH</p>
+
+                        <p style="margin-top: 2rem;">yours mostest lovingly,</p>
+                        <div class="note-signature">Ayush Singh ❤️</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        // Music Management
+        let currentPage = 'birthday';
+        let isMuted = false;
+
+        const audioElements = {
+            'birthday': document.getElementById('birthdayMusic'),
+            'memories': document.getElementById('memoriesMusic'),
+            'messages': document.getElementById('messagesMusic'),
+            'our-page': document.getElementById('ourPageMusic')
+        };
+
+        const musicControl = document.getElementById('musicControl');
+        const musicIcon = document.getElementById('musicIcon');
+
+        // Set volume for all audio elements
+        Object.values(audioElements).forEach(audio => {
+            if (audio) {
+                audio.volume = 0.5;
+            }
+        });
+
+        function getCurrentAudio() {
+            return audioElements[currentPage];
+        }
+
+        function stopAllAudio() {
+            Object.values(audioElements).forEach(audio => {
+                if (audio) {
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+            });
+        }
+
+        function playPageMusic(pageId) {
+            stopAllAudio();
+            currentPage = pageId;
+            const currentAudio = getCurrentAudio();
+            if (currentAudio) {
+                currentAudio.muted = isMuted;
+                currentAudio.play().catch(error => {
+                    console.log('Autoplay prevented or failed:', error);
+                });
+            }
+        }
+
+        function toggleMute() {
+            isMuted = !isMuted;
+            const currentAudio = getCurrentAudio();
+
+            // Update all audio elements state
+            Object.values(audioElements).forEach(audio => {
+                if (audio) {
+                    audio.muted = isMuted;
+                }
+            });
+
+            // Update UI
+            if (isMuted) {
+                musicIcon.textContent = '🔇';
+                musicControl.classList.add('muted');
+            } else {
+                musicIcon.textContent = '🎵';
+                musicControl.classList.remove('muted');
+                if (currentAudio && currentAudio.paused) {
+                    currentAudio.play().catch(e => console.log("Play failed on unmute:", e));
+                }
+            }
+        }
+
+        // Initialize music on page load or interaction
+        function startMusic() {
+            const currentAudio = getCurrentAudio();
+            if (currentAudio && currentAudio.paused) {
+                currentAudio.muted = isMuted;
+                currentAudio.play().catch(e => console.log("Start playback failed:", e));
+            }
+        }
+
+        window.addEventListener('scroll', startMusic, { once: true });
+        window.addEventListener('click', startMusic, { once: true });
+        window.addEventListener('touchstart', startMusic, { once: true });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            startMusic();
+        });
+
+        // Handle audio errors
+        Object.entries(audioElements).forEach(([page, audio]) => {
+            if (audio) {
+                audio.addEventListener('error', (e) => {
+                    console.log(`Audio error for ${page}:`, e);
+                });
+            }
+        });
+
+        // Split text into words for hero section animation
+        function splitIntoWords(element) {
+            const text = element.textContent;
+            const words = text.split(/(\s+)/);
+            element.innerHTML = '';
+
+            words.forEach((word, index) => {
+                if (word.trim()) {
+                    const wordSpan = document.createElement('span');
+                    wordSpan.className = 'word';
+                    wordSpan.textContent = word;
+                    wordSpan.style.transitionDelay = `${index * 0.1}s`;
+                    element.appendChild(wordSpan);
+                } else {
+                    element.appendChild(document.createTextNode(word));
+                }
+            });
+        }
+
+        // Animate hero section text on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const birthdayMessage = document.querySelector('.hero .birthday-message');
+            if (birthdayMessage) {
+                splitIntoWords(birthdayMessage);
+
+                setTimeout(() => {
+                    const words = birthdayMessage.querySelectorAll('.word');
+                    words.forEach((word, index) => {
+                        setTimeout(() => {
+                            word.classList.add('animate-in');
+                        }, 1200 + (index * 80));
+                    });
+                }, 100);
+            }
+        });
+
+        // Page Navigation Function
+        // Password protection
+        const CORRECT_PASSWORD = 'iluiluilu'; // Change this to your desired password
+        let isPasswordVerified = false;
+
+        function showPasswordModal() {
+            const modal = document.getElementById('passwordModal');
+            const passwordInput = document.getElementById('passwordInput');
+            const passwordError = document.getElementById('passwordError');
+
+            modal.classList.add('show');
+            passwordInput.value = '';
+            passwordError.classList.remove('show');
+            passwordInput.focus();
+        }
+
+        function closePasswordModal() {
+            const modal = document.getElementById('passwordModal');
+            modal.classList.remove('show');
+        }
+
+        function checkPassword() {
+            const passwordInput = document.getElementById('passwordInput');
+            const passwordError = document.getElementById('passwordError');
+            const enteredPassword = passwordInput.value.trim().toLowerCase();
+
+            if (enteredPassword === CORRECT_PASSWORD.toLowerCase()) {
+                isPasswordVerified = true;
+                closePasswordModal();
+
+                // Show the post-unlock animated message
+                showUnlockMessage();
+            } else {
+                passwordError.classList.add('show');
+                passwordInput.value = '';
+                passwordInput.focus();
+                // Shake animation
+                passwordInput.style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    passwordInput.style.animation = '';
+                }, 500);
+            }
+        }
+
+        function showUnlockMessage() {
+            const overlay = document.getElementById('unlockMessageOverlay');
+            const messageElement = document.getElementById('unlockMessageText');
+            const continueBtn = document.getElementById('unlockContinueBtn');
+
+            // The text will be given by the user, using a placeholder for now
+            const message = "To my Swadha... The girl who stole my heart and made me a better man. Every photo here is a chapter of us, and every word is a promise. Happy Birthday, Motu! ❤️";
+
+            overlay.classList.add('show');
+
+            // Typing animation logic
+            let i = 0;
+            messageElement.innerHTML = '';
+            const cursor = document.createElement('span');
+            cursor.className = 'typing-cursor';
+            messageElement.appendChild(cursor);
+
+            function typeWriter() {
+                if (i < message.length) {
+                    const char = message.charAt(i);
+                    const textNode = document.createTextNode(char);
+                    messageElement.insertBefore(textNode, cursor);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                } else {
+                    // Animation finished
+                    cursor.style.display = 'none';
+                    continueBtn.classList.add('visible');
+                }
+            }
+
+            setTimeout(typeWriter, 500);
+        }
+
+        function proceedToOurPage() {
+            const overlay = document.getElementById('unlockMessageOverlay');
+            overlay.classList.remove('show');
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                navigateToOurPage();
+            }, 500);
+        }
+
+        // Allow Enter key to submit password and Escape to close modal
+        document.addEventListener('DOMContentLoaded', () => {
+            const passwordInput = document.getElementById('passwordInput');
+            if (passwordInput) {
+                passwordInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        checkPassword();
+                    }
+                });
+            }
+
+            // Close modal on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('passwordModal');
+                    if (modal && modal.classList.contains('show')) {
+                        closePasswordModal();
+                    }
+                }
+            });
+        });
+
+        function navigateToOurPage() {
+            const pageId = 'our-page';
+            const allPages = document.querySelectorAll('.page');
+            allPages.forEach(page => {
+                page.classList.remove('active');
+                page.classList.add('hidden');
+            });
+
+            playPageMusic(pageId);
+
+            setTimeout(() => {
+                const targetPage = document.getElementById(pageId + '-page');
+                if (targetPage) {
+                    targetPage.classList.remove('hidden');
+                    targetPage.classList.add('active');
+                }
+
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.textContent === 'Our Page') {
+                        link.classList.add('active');
+                    }
+                });
+
+                animateOurPage();
+            }, 100);
+        }
+
+        function goToPage(pageId) {
+            // Check if trying to access Our Page
+            if (pageId === 'our-page' && !isPasswordVerified) {
+                showPasswordModal();
+                return;
+            }
+
+            // Hide all pages
+            const allPages = document.querySelectorAll('.page');
+            allPages.forEach(page => {
+                page.classList.remove('active');
+                page.classList.add('hidden');
+            });
+
+            // Switch music for the new page
+            playPageMusic(pageId);
+
+            // Show selected page
+            setTimeout(() => {
+                const targetPage = document.getElementById(pageId + '-page');
+                if (targetPage) {
+                    targetPage.classList.remove('hidden');
+                    targetPage.classList.add('active');
+                }
+
+                // Update active nav link
+                const navLinks = document.querySelectorAll('.nav-link');
+                const pageMap = {
+                    'birthday': 'Birthday',
+                    'memories': 'Memories',
+                    'messages': 'Messages',
+                    'our-page': 'Our Page'
+                };
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.textContent === pageMap[pageId]) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // Animate page content based on page
+                if (pageId === 'memories') {
+                    animateGallery();
+                } else if (pageId === 'messages') {
+                    animateMessages();
+                } else if (pageId === 'our-page') {
+                    animateOurPage();
+                } else if (pageId === 'birthday') {
+                    // Reset hero animations if needed
+                }
+            }, 100);
+        }
+
+        // Animate gallery when page is shown
+        function animateGallery() {
+            const galleryTitle = document.querySelector('.gallery-title');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            // Reset and animate title
+            if (galleryTitle) {
+                galleryTitle.classList.remove('visible');
+                setTimeout(() => {
+                    galleryTitle.classList.add('visible');
+                }, 200);
+            }
+
+            // Reset and animate items with staggered delay
+            galleryItems.forEach((item, index) => {
+                item.classList.remove('visible');
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, 400 + (index * 100));
+            });
+        }
+
+        // Animate messages page
+        function animateMessages() {
+            const pageTitle = document.querySelector('#messages-page .page-title');
+            const messageCards = document.querySelectorAll('.message-video-card');
+
+            if (pageTitle) {
+                pageTitle.classList.remove('visible');
+                setTimeout(() => {
+                    pageTitle.classList.add('visible');
+                }, 200);
+            }
+
+            messageCards.forEach((card, index) => {
+                card.classList.remove('visible');
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, 400 + (index * 200));
+            });
+        }
+
+        // Animate our page
+        function animateOurPage() {
+            const pageTitle = document.querySelector('#our-page-page .page-title');
+            const magElements = document.querySelectorAll('.mag-text-block, .mag-image-block, .mag-quote, .note-section');
+
+            if (pageTitle) {
+                pageTitle.classList.remove('visible');
+                setTimeout(() => {
+                    pageTitle.classList.add('visible');
+                }, 200);
+            }
+
+            magElements.forEach((el, index) => {
+                el.classList.remove('visible');
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, 400 + (index * 200));
+            });
+        }
+
+        // Gallery scroll animation observer (for when gallery is visible)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add parallax effect to background decorations
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const decorations = document.querySelectorAll('.flower, .balloon');
+            const bgCircles = document.querySelectorAll('.bg-circle');
+            const particles = document.querySelectorAll('.particle');
+
+            // Parallax for flowers and balloons
+            decorations.forEach((decoration, index) => {
+                const speed = 0.5 + (index % 4) * 0.1;
+                const yPos = -(scrolled * speed);
+                decoration.style.transform = `translateY(${yPos}px)`;
+            });
+
+            // Parallax for background circles
+            bgCircles.forEach((circle, index) => {
+                const speed = 0.3 + (index % 3) * 0.1;
+                const yPos = -(scrolled * speed);
+                const xPos = Math.sin(scrolled * 0.001) * 20;
+                circle.style.transform = `translate(${xPos}px, ${yPos}px)`;
+            });
+
+            // Parallax for particles
+            particles.forEach((particle, index) => {
+                const speed = 0.2 + (index % 4) * 0.05;
+                const yPos = -(scrolled * speed);
+                particle.style.transform = `translateY(${yPos}px)`;
+            });
+
+            // Dynamic background intensity based on scroll
+            const scrollPercent = Math.min(scrolled / (document.documentElement.scrollHeight - window.innerHeight), 1);
+            const animatedBg = document.querySelector('.animated-background');
+            if (animatedBg) {
+                animatedBg.style.opacity = 0.5 + (scrollPercent * 0.3);
+            }
+        });
+    </script>
+</body>
+
+</html>
